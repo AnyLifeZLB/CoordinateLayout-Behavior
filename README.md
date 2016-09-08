@@ -1,0 +1,19 @@
+# CoordinateLayout-Behavior
+CoordinateLayout-Behavior
+CoordinatorLayout能做什么
+
+在学习CoordinatorLayout之前，很有必要了解CoordinatorLayout能帮我们做什么，从名字上可以看出，就是帮我们协调子View的。怎么个协调法呢?就是它根据我们的定制，帮助我们协调各个子View的布局。我们先看一组动画图~
+
+CoordinatorLayout演示
+
+CoordinatorLayout演示截图
+
+稍微解释一下这个动画，蓝色的矩形是我们一个普通View，黄色的Hello是一个Button。我们水平拖动蓝色矩形时，黄色Button沿着与蓝色矩形相反方向移动；竖直移动蓝色矩形时，黄色也跟着竖直。简而言之：它们在竖直方向同步移动，在水平方向相反。
+
+这个效果如果让你不用CoordinatorLayout去实现，应该没有任何问题，但是代码的耦合度应该非常大，你的代码必须要持有2个View的引用，然后在onTouchEvent里面做各种判断。如果我们想要实现的功能是，有更多的View要根据蓝色的View的移动相应作出响应，那么那就得在蓝色View的onTounchEvent里面针对其他的View处理各种逻辑。这耦合度未免太伤感了~
+
+而CoordinatorLayout既然号称能帮我们协调子View的布局，我们接下来看看CoordinatorLayout如何实现~
+
+文／huachao1001（简书作者）
+原文链接：http://www.jianshu.com/p/72d45d1f7d55
+著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。
